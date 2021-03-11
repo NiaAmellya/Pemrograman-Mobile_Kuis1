@@ -1,6 +1,6 @@
 # kuis1
-
-A new Flutter project.
+Progres 1
+![plot](./image/progres1.PNG)
 
 ## Getting Started
 

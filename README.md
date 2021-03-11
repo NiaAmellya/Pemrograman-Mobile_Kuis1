@@ -1,6 +1,6 @@
 # kuis1
 Progres 1
-![plot](./image/progres1.PNG)
+![plot](./images/progres1.PNG)
 
 ## Getting Started
 

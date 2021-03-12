@@ -21,7 +21,7 @@ class _MyAppState extends State<MyApp> {
 
   double _panjang = 0;
   double _lebar = 0;
-  var listItem = ["Persegi", "Persegi Panjang"];
+  var listItem = ["Persegi", "Persegi Panjang", "Segitiga"];
   String _newValue = "Persegi";
   double _luas = 0;
   List<String> listViewItem = List<String>();
@@ -31,9 +31,14 @@ class _MyAppState extends State<MyApp> {
       _panjang = double.parse(panjang.text);
       _lebar = double.parse(lebar.text);
 
-      if (_newValue == "Persegi") _luas = _panjang * _lebar;
-      //else
-      //_result = (4 / 5) * nCelcius;
+      if (_newValue == "Persegi") {
+        _luas = _panjang * _lebar;
+      } else if (_newValue == "Persegi Panjang") {
+        _luas = _panjang * _lebar;
+      } else if (_newValue == "Segitiga") {
+        _luas = ((_panjang * _lebar) * 1 / 2);
+      }
+
       addItemToList();
     });
   }

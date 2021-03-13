@@ -3,6 +3,10 @@ Progres 1
 
 ![plot](./images/progres1.PNG)
 
+Progres 3
+
+![plot](./images/progres 2.PNG)
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.

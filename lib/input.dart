@@ -22,10 +22,10 @@ class Input extends StatelessWidget {
               child: TextFormField(
                   controller: panjang,
                   decoration: InputDecoration(
-                      labelText: "Panjang",
+                      labelText: "Panjang/Sisi/Alas",
                       border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(10.0)),
-                      hintText: "Masukkan Panjang"),
+                      hintText: "Masukkan angka"),
                   keyboardType: TextInputType.number,
                   inputFormatters: <TextInputFormatter>[
                 FilteringTextInputFormatter.allow(RegExp(r'[0-9]'))
@@ -34,10 +34,10 @@ class Input extends StatelessWidget {
               child: TextFormField(
                   controller: lebar,
                   decoration: InputDecoration(
-                      labelText: "Lebar",
+                      labelText: "Lebar/Sisi/Tinggi",
                       border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(10.0)),
-                      hintText: "Masukkan Lebar"),
+                      hintText: "Masukkan angka"),
                   keyboardType: TextInputType.number,
                   inputFormatters: <TextInputFormatter>[
                 FilteringTextInputFormatter.allow(RegExp(r'[0-9]'))

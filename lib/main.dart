@@ -21,9 +21,10 @@ class _MyAppState extends State<MyApp> {
 
   double _panjang = 0;
   double _lebar = 0;
-  var listItem = ["Persegi", "Persegi Panjang", "Segitiga"];
+  var listItem = ["Persegi", "Persegi Panjang", "Segitiga Sama Sisi"];
   String _newValue = "Persegi";
   double _luas = 0;
+  double _kel = 0;
   List<String> listViewItem = List<String>();
 
   void _perhitungan() {
@@ -33,10 +34,13 @@ class _MyAppState extends State<MyApp> {
 
       if (_newValue == "Persegi") {
         _luas = _panjang * _lebar;
+        _kel = ((2 * _panjang) + (2 * _lebar));
       } else if (_newValue == "Persegi Panjang") {
         _luas = _panjang * _lebar;
-      } else if (_newValue == "Segitiga") {
+        _kel = ((2 * _panjang) + (2 * _lebar));
+      } else if (_newValue == "Segitiga Sama Sisi") {
         _luas = ((_panjang * _lebar) * 1 / 2);
+        _kel = 3 * _panjang;
       }
 
       addItemToList();
@@ -45,8 +49,10 @@ class _MyAppState extends State<MyApp> {
 
   void addItemToList() {
     setState(() {
-      String hasil = _newValue + " : " + _luas.toStringAsFixed(1);
-      listViewItem.insert(0, hasil);
+      String hasil1 = _newValue + " : " + _luas.toStringAsFixed(1);
+      listViewItem.insert(0, hasil1);
+      String hasil2 = _newValue + " : " + _kel.toStringAsFixed(1);
+      listViewItem.insert(0, hasil2);
     });
   }
 
@@ -85,7 +91,7 @@ class _MyAppState extends State<MyApp> {
                 value: _newValue,
                 onChanged: dropdownOnChanged,
               ),
-              Result(result: _luas),
+              Result(luas: _luas, keliling: _kel),
               Convert(konvertHandler: _perhitungan),
               Container(
                 margin: EdgeInsets.only(top: 10, bottom: 10),

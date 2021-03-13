@@ -5,7 +5,7 @@ Progres 1
 
 Progres 3
 
-![plot](./images/progres 2.PNG)
+![plot](./images/progres2.PNG)
 
 ## Getting Started
 
